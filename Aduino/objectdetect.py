@@ -1,3 +1,7 @@
+"""
+Raw Algorithm
+"""
+
 import open3d as o3d
 import matplotlib.pyplot as plt
 from sklearn.cluster import DBSCAN
