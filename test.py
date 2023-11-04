@@ -2,17 +2,22 @@ import csv
 import numpy as np
 import open3d as o3d
 
-# List of distances from the sensor 
+# List of distances from the sensor
 distances = []
 
-with open("TestData.csv", "r") as test_data:
+with open("DelphinTEST1.csv", "r") as test_data:
     reader = csv.reader(test_data)
-    
+
     # Removing redundances from the input csv file
     for line in reader:
         row = line[0]
-        if " cm" in row:
+        print(row)
+        if " cm" in row: 
             row = row.replace(" cm", '')
+        if "Distance: " in row:
+            row = row.replace("Distance: ", '')
+        if "ï»¿" in row:
+            row = row.replace("ï»¿", '')
         distances.append(row)
 
 print(type(distances[2]))
@@ -21,7 +26,6 @@ print(type(distances[2]))
 distances = [float(x) for x in distances]
 
 print(type(distances[2]))
-
 
 x_axis = distances
 y_axis = [x + 24.32 for x in distances]
