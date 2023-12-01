@@ -11,13 +11,13 @@ import open3d as o3d
 import math
 
 # River file name
-river_file_name = "EXP1DEMO.csv"
+river_file_name = "test_data.csv"
 
 # Variables as per the distance of the Delphin from water surface
 Delphin_depth = 0
 Delphin_dist_from_left_edge = 0 # Currently 0, else we need a formula, yet to be formulated
 Delphin_dist_from_right_edge = 0 # Currently 0, else we need a formula, yet to be formulated
-Delphin_speed = 10 # This is the speed to be maintained whatever the river current might be
+Delphin_speed = 1 # This is the speed to be maintained whatever the river current might be
 
 # Mapping Sensor ID
 front_mapping_sensor = 0
